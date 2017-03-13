@@ -8,8 +8,10 @@ Press `Shift+G` in fman on a selected file.
 
 ### macOS
 
+  ```
   cd ~/Library/Application Support/fman/Plugins
   git clone https://github.com/philippeowagner/openingithub.git
+  ```
 
 ## Update
 If you're brave: `git pull`
