@@ -10,5 +10,9 @@ Press `Shift+G` in fman on a selected file.
 cd ~/Library/Application Support/fman/Plugins
 git clone https://github.com/philippeowagner/openingithub.git
 
-
 ## Update
+If you're brave: `git pull`
+
+## Notes
+
+* `github` must be installed and exported to your `PATH`.
