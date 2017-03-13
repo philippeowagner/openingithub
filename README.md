@@ -1,7 +1,14 @@
 # OpenInGithub
-[fman](https://fman.io) plugin to navigate to the currently selected file in the corresponding repository within (Github Desktop)[https://desktop.github.com/].
+[fman](https://fman.io) plugin to navigate to the currently selected file in the corresponding repository within [Github Desktop](https://desktop.github.com/).
 
 ## Usage
-Press `Shift+g` in fman
+Press `Shift+G` in fman on a selected file.
 
 ## Install
+
+### macOS
+cd ~/Library/Application Support/fman/Plugins
+git clone https://github.com/philippeowagner/openingithub.git
+
+
+## Update
