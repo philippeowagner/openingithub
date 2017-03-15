@@ -1,4 +1,5 @@
 from subprocess import Popen
+import platform
 from fman import DirectoryPaneCommand, show_alert, load_json
 
 PLUGIN_SETTINGS = load_json("OpenInGithub Settings.json")[0]
@@ -8,6 +9,10 @@ class OpenInGithub(DirectoryPaneCommand):
 	def __call__(self):
 		file_under_cursor = self.pane.get_file_under_cursor()
 		if file_under_cursor:
-			Popen('%s "%s"' % (GITHUB_BINARY, file_under_cursor), shell=True)
+			if platform.system() == "Windows":
+				Popen('"%s" %s' % (GITHUB_BINARY, file_under_cursor), shell=True)
+			else:
+				Popen('%s "%s"' % (GITHUB_BINARY, file_under_cursor), shell=True)
+
 		else:
 			show_alert("No file selected.")
