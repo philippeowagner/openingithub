@@ -1,7 +1,8 @@
 from subprocess import Popen
-from fman import DirectoryPaneCommand, show_alert
+from fman import DirectoryPaneCommand, show_alert, load_json
 
-GITHUB_BINARY = "/usr/local/bin/github"
+PLUGIN_SETTINGS = load_json("OpenInGithub Settings.json")[0]
+GITHUB_BINARY = PLUGIN_SETTINGS["github_binary"]
 
 class OpenInGithub(DirectoryPaneCommand):
 	def __call__(self):
